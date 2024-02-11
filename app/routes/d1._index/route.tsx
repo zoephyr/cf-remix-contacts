@@ -40,17 +40,17 @@ const Articles = () => {
       <h1>Articles</h1>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <a href="/d1">Home</a>
         </li>
         <li>
-          <a href="/defer">Home with Deferred Loading</a>
+          <a href="/d1/defer">Home with Deferred Loading</a>
         </li>
       </ul>
       {articles.length > 0 ? (
         <div>
           {articles.map((article: QueriedArticle) => (
             <div key={article.slug}>
-              <a href={`/articles/${article.slug}`}>{article.title}</a>
+              <a href={`/d1/articles/${article.slug}`}>{article.title}</a>
               <p>{article.excerpt}</p>
             </div>
           ))}
