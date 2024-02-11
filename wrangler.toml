@@ -1,3 +1,8 @@
 kv_namespaces = [
   { id = "MY_KV", binding="MY_KV" }
 ]
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "nelumbo_cloud"
+database_id = "84c0ead8-ce84-4750-8fcb-c677f428c88f"
+preview_database_id = "DB"
