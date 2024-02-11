@@ -131,6 +131,8 @@ dist
 
 node_modules
 
+build
+
 /.cache
 /functions/\[\[path\]\].js
 /functions/\[\[path\]\].js.map
