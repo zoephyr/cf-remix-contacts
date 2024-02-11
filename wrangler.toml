@@ -1,5 +1,5 @@
 kv_namespaces = [
-  { id = "MY_KV", binding="MY_KV" }
+  { id = "c5a2a40428af4e4b87df65ee49b3db58", binding="MY_KV" }
 ]
 [[d1_databases]]
 binding = "DB" # i.e. available in your Worker on env.DB
