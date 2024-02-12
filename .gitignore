@@ -141,3 +141,4 @@ build
 /public/build
 .dev.vars
 .wrangler
+pnpm-lock.yaml
