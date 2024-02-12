@@ -1,8 +1,39 @@
+# Top-level configuration
+
+compatibility_date = "2024-02-11"
+
+workers_dev = false
+route = { pattern = "nelumbo.cloud/*", zone_name = "nelumbo.cloud" }
+
 kv_namespaces = [
-  { id = "c5a2a40428af4e4b87df65ee49b3db58", binding="MY_KV" }
+{ binding = "nelumbo_cloud", id = "fe062e0266b14379b0a132c7d2931c2e" }
 ]
+
+
+
 [[d1_databases]]
 binding = "DB" # i.e. available in your Worker on env.DB
 database_name = "nelumbo_cloud"
-database_id = "84c0ead8-ce84-4750-8fcb-c677f428c88f"
+database_id = "1d020242-05b3-4441-a15a-ffba6c55cb16"
 preview_database_id = "DB"
+
+
+[env.staging]
+name = "nelumbo-cloud-stage"
+route = { pattern = "stage.nelumbo.cloud/*", zone_name = "nelumbo.cloud" }
+
+
+[env.staging.vars]
+API_HOST = "stage.nelumbo.cloud"
+API_ACCOUNT_ID = "stage_nelumbo_cloud"
+SERVICE_X_DATA = { URL = "stage.nelumbo.cloud", MY_ID = 123 }
+
+
+[env.production]
+name = "nelumbo-cloud-prod"
+route = { pattern = "prod.nelumbo.cloud/*", zone_name = "nelumbo.cloud" }
+
+[env.production.vars]
+API_HOST = "prod.nelumbo.cloud,"
+API_ACCOUNT_ID = "production_nelumbo_cloud"
+SERVICE_X_DATA = { URL = "prod.nelumbo.cloud", MY_ID = 456 }

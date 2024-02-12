@@ -141,4 +141,3 @@ build
 /public/build
 .dev.vars
 .wrangler
-wrangler.toml
