@@ -1,7 +1,7 @@
 # Top-level configuration
 
 compatibility_date = "2024-02-11"
-
+name = "cf-vitemix-cms"
 workers_dev = false
 route = { pattern = "nelumbo.cloud/*", zone_name = "nelumbo.cloud" }
 
