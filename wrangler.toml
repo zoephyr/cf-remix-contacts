@@ -6,7 +6,7 @@ workers_dev = false
 route = { pattern = "nelumbo.cloud/*", zone_name = "nelumbo.cloud" }
 
 kv_namespaces = [
-{ binding = "nelumbo_cloud", id = "fe062e0266b14379b0a132c7d2931c2e" }
+{ binding = "worker-nelumbo_cloud", id = "fe062e0266b14379b0a132c7d2931c2e" }
 ]
 
 
