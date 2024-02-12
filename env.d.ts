@@ -6,7 +6,7 @@ import type { KVNamespace, D1Database } from "@cloudflare/workers-types";
 declare module "@remix-run/cloudflare" {
   interface AppLoadContext {
     env: {
-      MY_KV: KVNamespace;
+      NELUMBO_CLOUD: KVNamespace;
       DB: D1Database;
     };
   }

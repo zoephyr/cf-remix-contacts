@@ -6,15 +6,15 @@ workers_dev = false
 route = { pattern = "nelumbo.cloud/*", zone_name = "nelumbo.cloud" }
 
 kv_namespaces = [
-{ binding = "worker-nelumbo_cloud", id = "fe062e0266b14379b0a132c7d2931c2e" }
+{ binding = "NELUMBO_CLOUD", id = "fe062e0266b14379b0a132c7d2931c2e" }
 ]
 
 
 
 [[d1_databases]]
 binding = "DB" # i.e. available in your Worker on env.DB
-database_name = "nelumbo_cloud"
-database_id = "1d020242-05b3-4441-a15a-ffba6c55cb16"
+database_name = "open-cms-db"
+database_id = "233bf572-c848-4e52-8898-3cf9d987962a"
 preview_database_id = "DB"
 
 
