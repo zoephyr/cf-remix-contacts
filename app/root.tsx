@@ -18,6 +18,7 @@ import Sidebar from "./components/sidebar";
 // export const links: LinksFunction = () => [
 //   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 // ];
+
 import { createEmptyContact, getContacts } from "./lib/fakeData";
 
 export const action = async () => {
