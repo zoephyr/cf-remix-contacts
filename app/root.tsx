@@ -15,9 +15,9 @@ import {
 import { useEffect, useState } from "react";
 import "./app.css";
 import Sidebar from "./components/sidebar";
-export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-];
+// export const links: LinksFunction = () => [
+//   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+// ];
 import { createEmptyContact, getContacts } from "./lib/fakeData";
 
 export const action = async () => {
