@@ -5,6 +5,7 @@ interface SidebarProps {
   query: string;
   setQuery: React.Dispatch<React.SetStateAction<string>>;
   submit: SubmitFunction;
+  searching: boolean;
 }
 
 export default function Sidebar(props: SidebarProps) {
@@ -16,11 +17,15 @@ export default function Sidebar(props: SidebarProps) {
           id="search-form"
           role="search"
           onChange={(event) => {
-            props.submit(event.currentTarget);
+            const isFirstSearch = props.query === null;
+            props.submit(event.currentTarget, {
+              replace: !isFirstSearch,
+            });
           }}
         >
           <input
             defaultValue={props.query || ""}
+            className={props.searching ? "loading": ""}
             aria-label="Search contacts"
             id="q"
             name="q"
@@ -31,7 +36,7 @@ export default function Sidebar(props: SidebarProps) {
             }}
             value={props.query}
           />
-          <div aria-hidden hidden={true} id="search-spinner" />
+          <div aria-hidden hidden={!props.searching} id="search-spinner" />
         </Form>
         <Form method="post">
           <button type="submit">New</button>

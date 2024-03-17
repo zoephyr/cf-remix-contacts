@@ -36,6 +36,9 @@ export default function App() {
   const { contacts, q } = useLoaderData<typeof loader>();
   const navigation = useNavigation();
   const submit = useSubmit();
+  const searching =
+    navigation.location &&
+    new URLSearchParams(navigation.location.search).has("q");
 
   const [query, setQuery] = useState(q || "");
 
@@ -57,9 +60,10 @@ export default function App() {
           query={query}
           setQuery={setQuery}
           submit={submit}
+          searching = {searching as boolean}
         />
         <div
-          className={navigation.state === "loading" ? "loading" : ""}
+          className={navigation.state === "loading" && !searching ? "loading" : ""}
           id="detail"
         >
           <Outlet />
