@@ -1,14 +1,13 @@
 import { Form, useFetcher, useLoaderData } from "@remix-run/react";
 import { json } from "@remix-run/cloudflare";
 import type { FunctionComponent } from "react";
-import { ContactRecord, getContact } from "~/lib/fakeData";
+import { ContactRecord,  getContact, updateContact } from "~/lib/fakeData";
 import type {
   LoaderFunctionArgs,
   ActionFunctionArgs,
 } from "@remix-run/cloudflare";
 import invariant from "tiny-invariant";
 
-import { getContact, updateContact } from "~/lib/fakeData";
 
 export const action = async ({ params, request }: ActionFunctionArgs) => {
   invariant(params.contactId, "Missing contactId param");
